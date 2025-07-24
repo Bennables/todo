@@ -2,33 +2,47 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Navbar from '../components/Navbar'
+import TodoItem from '../components/todoItem'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [loggedIn, setloggedIn] = useState(false);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="container">
+      <Navbar loggedIn={loggedIn}/>
+      <TodoItem></TodoItem>
+      <p>lkjsdlfjalsdjf;lak</p>
+      {/* 
+      navbar:
+        login
+        home
+        completed
+        add task
+
+      body:
+        component of todo items
+          mapped out
+        drag to rearrange
+        triple dots to edit
+      
+
+      ON COMPLETION:
+        EXPLOSIONS THAT YAYAYYAYAAY
+
+      
+
+      OTHER PAGES:
+        edit page
+        login page
+
+      
+      
+      later on
+        calendar feature
+      
+      */}
+    </div>
   )
 }
 

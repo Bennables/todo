@@ -1,0 +1,32 @@
+        /* // whole component
+        <div className="left-sidebar">
+            <div className="bar-item">
+                <p>Home</p>
+            </div>
+            <div className="bar-item">
+                <p>Completed</p>
+            </div>
+            <div className="bar-item">
+                <p>Add Task</p>
+            </div>
+            <div className="bar-item">
+                {props.loggedIn ? <img src="./assets/emptyProf.jpeg"/>:<p>Login</p>}
+            </div>
+            
+        
+        
+            <p>alksdjf;laskdf</p>
+        
+        </div> */
+
+
+.left-sidebar{
+    height:100%;
+    justify-content: left;
+    color:white;
+    /* background-color:red; */
+    margin-left: 50px;
+    align-items: start;
+
+
+}
