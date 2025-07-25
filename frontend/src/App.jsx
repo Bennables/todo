@@ -1,19 +1,18 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
-import Navbar from '../components/Navbar'
-import TodoItem from '../components/todoItem'
+import Navbar from './components/Navbar'
+import TodoItem from './components/todoItem'
+import LoginPage from './Pages/LoginPage'
+import RegisterPage from './Pages/RegisterPage'
+import { BrowserRouter, Routes, Route } from 'react-router'
+import Home from './Pages/Home'
+import Dashboard from './Pages/Dashbord'
 
 function App() {
   const [loggedIn, setloggedIn] = useState(false);
 
-  return (
-    <div className="container">
-      <Navbar loggedIn={loggedIn}/>
-      <TodoItem></TodoItem>
-      <p>lkjsdlfjalsdjf;lak</p>
-      {/* 
+  {/* 
       navbar:
         login
         home
@@ -42,6 +41,23 @@ function App() {
         calendar feature
       
       */}
+
+  return (
+    <div className="container">
+
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/register" element={<RegisterPage/>} />
+          <Route path="/login" element={<LoginPage/>} />
+          <Route path="/dash" element={<Dashboard/>} />
+        </Routes>
+      </BrowserRouter>
+      {/* <Navbar loggedIn={loggedIn}/>
+      <LoginPage/>
+      <RegisterPage/> */}
+      <p>lkjsdlfjalsdjf;lak</p>
+      
     </div>
   )
 }
