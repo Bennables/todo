@@ -2,9 +2,9 @@ import mongoose from 'mongoose'
 
 
 const loginSchema = mongoose.Schema({
-    "Name": String,
-    "Email": String,
-    "Password": String
+    "email": String,
+    "username": String,
+    "password": String
 
 })
 
